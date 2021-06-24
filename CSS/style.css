@@ -1,0 +1,198 @@
+/* Start Variables */
+:root {
+  --main-color: #ffcc01;
+  --text-color: #1f373d;
+  --section-padding: 50px;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 870px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+.header {
+  padding: 20px 0 var(--section-padding) 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header .container nav .content {
+  display: flex;
+}
+.header .container nav .content i {
+  display: none;
+  font-size: 20px;
+  color: var(--text-color);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.header .container nav .content i:hover {
+  color: var(--main-color);
+}
+.header .container nav .content i:hover + ul {
+  display: flex;
+  margin-right: 22px;
+  margin-top: -7px;
+}
+@media (max-width: 767.9px) {
+  .header .container nav .content i {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+.header .container .logo {
+  width: fit-content;
+  font-size: 25px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  color: var(--text-color);
+}
+.header .container .logo::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-text-fill-color: var(--main-color);
+  overflow: hidden;
+}
+.header .container .logo:hover:before {
+  width: 100%;
+}
+.header .container nav {
+  display: flex;
+  justify-content: space-between;
+  min-width: 70%;
+}
+.header .container nav .content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .container nav .content ul li a {
+  font-size: 13px;
+  margin-right: 30px;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+@media (min-width: 768px) {
+  .header .container nav .content ul li a {
+    margin-right: 20px;
+  }
+}
+.header .container nav .content ul li:hover a {
+  color: var(--main-color);
+}
+.header .container nav .end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .container nav ul li.special {
+  font-size: 13px;
+  margin-left: 30px;
+  margin-right: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+.header .container nav ul li.active {
+  margin-right: 0px;
+  cursor: pointer;
+  background-color: var(--main-color);
+  padding: 13px 22.5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+@media (max-width: 767.9px) {
+  .header .container nav {
+    flex-direction: column;
+    padding-top: 25px;
+    min-width: 188px;
+    width: 188px;
+  }
+  .header .container nav .content ul {
+    display: none;
+    padding-top: 25px;
+    flex-direction: column;
+    background-color: var(--main-color);
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header .container nav .content ul li a {
+    margin-bottom: 25px;
+    display: block;
+    margin-right: 0;
+  }
+  .header .container nav .content ul li:hover a {
+    color: var(--text-color);
+  }
+  .header .container nav ul li.special {
+    margin: 0 0 25px 0;
+  }
+  .header .container nav ul li.active {
+    background-color: black;
+    color: var(--main-color);
+    padding: 10px 12px;
+    margin-bottom: 15px;
+  }
+}
+/* End Header */
