@@ -10,7 +10,7 @@
     <!-- Font Awesome Library -->
     <link rel="stylesheet" href="CSS/all.css" />
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="CSS/test.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,31 +19,24 @@
       rel="stylesheet"
     />
     <title>Luxestate | Template 5</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".icon").click(function () {
-          $("ul").toggleClass("show");
-        });
-      });
-    </script>
   </head>
   <body>
     <!-- Start Header -->
     <nav>
       <a href="#" class="logo" data-text="luxestate">luxestate</a>
+      <input type="checkbox" id="check" />
+      <label class="icon" for="check">
+        <i class="fal fa-bars"></i>
+      </label>
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Appartments</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Agents</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Appartments">Appartments</a></li>
+        <li><a href="#How">How It Works</a></li>
+        <li><a href="#Agents">Agents</a></li>
+        <li><a href="#Contact">Contact Us</a></li>
         <li class="special">Join Us</li>
         <li class="active">Getting Started</li>
       </ul>
-      <label class="icon">
-        <i class="fal fa-bars"></i>
-      </label>
     </nav>
     <!-- End Header -->
     <!-- Start Landing -->

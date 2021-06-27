@@ -78,9 +78,11 @@ nav .logo::before {
   position: absolute;
   height: 35.5px;
   top: 50%;
-  left: -100%;
+  left: 0;
+  width: 0;
+  overflow: hidden;
   transition: 0.5s all ease;
-  color: var(--main-color);
+  -webkit-text-fill-color: var(--main-color);
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -92,7 +94,7 @@ nav .logo::before {
   -o-transition: 0.5s all ease;
 }
 nav .logo:hover::before {
-  left: 0;
+  width: 100%;
 }
 nav ul {
   position: absolute;
@@ -178,7 +180,14 @@ nav .icon i {
 nav i:hover {
   color: var(--main-color);
 }
+#check {
+  display: none;
+}
 @media (max-width: 880px) {
+  nav {
+    position: fixed;
+    z-index: 500;
+  }
   nav .icon {
     display: block;
   }
@@ -187,7 +196,7 @@ nav i:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    right: -2000px;
+    left: -100%;
     background-color: #607d8b;
     text-align: center;
     margin-top: 80px;
@@ -230,8 +239,8 @@ nav i:hover {
     font-weight: 500;
     color: black;
   }
-  nav ul.show {
-    right: -20px;
+  #check:checked ~ ul {
+    left: 0;
   }
 }
 /* End Header */
