@@ -10,7 +10,7 @@
     <!-- Font Awesome Library -->
     <link rel="stylesheet" href="CSS/all.css" />
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/test.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,30 +19,32 @@
       rel="stylesheet"
     />
     <title>Luxestate | Template 5</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".icon").click(function () {
+          $("ul").toggleClass("show");
+        });
+      });
+    </script>
   </head>
   <body>
     <!-- Start Header -->
-    <div class="header" id="home">
-      <div class="container">
-        <div class="logo" data-text="luxestate">
-          <a href="#home">luxestate</a>
-        </div>
-        <nav>
-          <span class="content">
-            <i class="fas fa-bars"></i>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#appartments">Appartments</a></li>
-              <li><a href="#how">How It Works</a></li>
-              <li><a href="#agents">Agents</a></li>
-              <li><a href="#contact">Contact Us</a></li>
-              <li class="special">Join Us</li>
-              <li class="active">Getting Started</li>
-            </ul>
-          </span>
-        </nav>
-      </div>
-    </div>
+    <nav>
+      <a href="#" class="logo" data-text="luxestate">luxestate</a>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Appartments</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Agents</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li class="special">Join Us</li>
+        <li class="active">Getting Started</li>
+      </ul>
+      <label class="icon">
+        <i class="fal fa-bars"></i>
+      </label>
+    </nav>
     <!-- End Header -->
     <!-- Start Landing -->
     <div class="landing">
