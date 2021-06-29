@@ -49,6 +49,23 @@ a {
   }
 }
 /* End Global Rules */
+/* Start Components */
+.main-heading {
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 50px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+.main-heading-p {
+  max-width: 361px;
+  height: 95px;
+  font-size: 13px;
+  line-height: 30px;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+/* End Components */
 /* Start Header */
 nav {
   width: 100%;
@@ -281,7 +298,7 @@ nav i:hover {
   }
 }
 
-.image {
+.landing .container .image {
   width: 960px;
   height: 630px;
   background-color: var(--background-color);
@@ -639,22 +656,7 @@ nav i:hover {
   padding: var(--section-padding) 0;
   background-color: #ffffff;
 }
-.how .container .heading h2 {
-  font-size: 40px;
-  letter-spacing: -1px;
-  line-height: 50px;
-  color: var(--text-color);
-  font-weight: 600;
-}
-.how .container .heading p {
-  max-width: 361px;
-  height: 95px;
-  font-size: 13px;
-  line-height: 30px;
-  color: var(--text-color);
-  margin-bottom: 50px;
-}
-.how .container .content {
+.how .container > .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
@@ -754,4 +756,49 @@ nav i:hover {
     padding: 150px 40px 70px;
   }
 }
+/* Start Services */
+.services {
+  padding-top: 50px;
+}
+.services > .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services > .content .text {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+.services > .content .text p {
+  max-width: 442px;
+  height: 126px;
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.services > .content .text h3 {
+  font-size: 25px;
+  letter-spacing: -1px;
+  line-height: 50px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+@media (max-width: 992px) {
+  .services > .content {
+    flex-direction: column;
+  }
+  .services > .content .image img {
+    margin-bottom: 40px;
+    width: 300px;
+    height: 430px;
+  }
+}
+@media (max-width: 768px) {
+  .services > .content .text p {
+    margin-bottom: 40px;
+  }
+}
+/* End Services */
 /* End How It Works */
