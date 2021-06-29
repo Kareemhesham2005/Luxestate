@@ -634,3 +634,124 @@ nav i:hover {
   }
 }
 /* End Appartments */
+/* Start How It Works */
+.how {
+  padding: var(--section-padding) 0;
+  background-color: #ffffff;
+}
+.how .container .heading h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 50px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+.how .container .heading p {
+  max-width: 361px;
+  height: 95px;
+  font-size: 13px;
+  line-height: 30px;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+.how .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  place-items: center;
+}
+.how .container .content .box {
+  cursor: pointer;
+  width: fit-content;
+  box-shadow: 0 0 15px 0px #bdbdbd;
+  padding: 150px 70px 70px;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.how .container .content .box:hover {
+  background-color: var(--main-color);
+  color: white;
+  box-shadow: none;
+}
+.how .container .content .box:hover p.special::before {
+  background-color: white;
+}
+.how .container .content .box h3 {
+  font-size: 18px;
+  line-height: 63px;
+  position: relative;
+}
+.how .container .content .box p {
+  width: 212px;
+  height: 95px;
+  font-size: 13px;
+  line-height: 30px;
+}
+.how .container .content .box p.special {
+  font-weight: 700;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.how .container .content .box-1 {
+  background-color: var(--main-color);
+  color: white;
+  box-shadow: none;
+}
+.how .container .content .box-1::before {
+  content: "01";
+}
+.how .container .content .box-2::before {
+  content: "02";
+}
+.how .container .content .box-3::before {
+  content: "03";
+}
+.how .container .content .box::before {
+  font-size: 180px;
+  font-weight: 700;
+  position: absolute;
+  left: -40px;
+  top: -80px;
+}
+.how .container .content .box-1 h3::before {
+  content: "01";
+}
+.how .container .content .box-2 h3::before {
+  content: "02";
+}
+.how .container .content .box-3 h3::before {
+  content: "03";
+}
+.how .container .content .box h3::before {
+  position: absolute;
+  left: -35px;
+}
+.how .container .content .box p.special::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: var(--text-color);
+}
+.how .container .content .box-1 p.special::before {
+  background-color: white;
+}
+@media (max-width: 768px) {
+  .how .container .content {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .how .container .content .box {
+    padding: 150px 40px 70px;
+  }
+}
+/* End How It Works */
