@@ -30,12 +30,6 @@ a {
   padding: 0 15px;
   margin: 0 auto;
 }
-/* Small */
-@media (min-width: 768px) {
-  .container {
-    width: 870px;
-  }
-}
 /* Medium */
 @media (min-width: 992px) {
   .container {
@@ -1034,3 +1028,117 @@ nav i:hover {
   }
 }
 /* End Contact */
+/* Start Footer */
+.footer {
+  padding: var(--section-padding) 0;
+  background-color: var(--text-color);
+  color: white;
+}
+.footer .container .input {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.footer .container .input::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  bottom: -40px;
+  position: absolute;
+  left: 0;
+}
+.footer .container .input h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  margin-top: 0;
+}
+.footer .container .input input {
+  width: 475px;
+  height: 70px;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+.footer .container .input input:focus {
+  outline: none;
+}
+.footer .container .input i {
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  color: var(--text-color);
+  font-size: 30px;
+}
+.footer .container .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer .container .content .left h2 {
+  margin-bottom: 60px;
+  font-size: 25px;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+.footer .container .content .right {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 680px;
+}
+.footer .container .content .right .box h3 {
+  font-size: 15px;
+  color: #919eb1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.footer .container .content .right .box p {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+.footer .container .content .right .two p:nth-child(3) {
+  text-transform: uppercase;
+}
+@media (max-width: 992px) {
+  .footer .container .content {
+    flex-direction: column-reverse;
+  }
+  .footer .container .input {
+    flex-direction: column;
+  }
+  .footer .container .input i {
+    left: 400px;
+    top: 169px;
+    right: auto;
+  }
+  .footer .container .content .right {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .footer .container .input input {
+    width: 300px;
+    padding-left: 15px;
+  }
+  .footer .container .input input::placeholder {
+    font-size: 13px;
+  }
+  .footer .container .input i {
+    left: 250px;
+    top: 144px;
+    font-size: 25px;
+  }
+  .footer .container .input h1 {
+    font-size: 30px;
+  }
+  .footer .container .content .right {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+/* End Footer */
