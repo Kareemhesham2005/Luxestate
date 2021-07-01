@@ -1064,12 +1064,22 @@ nav i:hover {
 .footer .container .input input:focus {
   outline: none;
 }
-.footer .container .input i {
+.footer .container .input a {
   position: absolute;
   right: 40px;
   top: 50px;
   color: var(--text-color);
+}
+.footer .container .input a:hover i {
+  color: var(--main-color);
+}
+.footer .container .input a i {
   font-size: 30px;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
 }
 .footer .container .content {
   display: flex;
@@ -1101,6 +1111,17 @@ nav i:hover {
   margin-bottom: 25px;
   text-transform: capitalize;
 }
+.footer .container .content .right .box p a {
+  color: white;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.footer .container .content .right .box p a:hover {
+  color: var(--main-color);
+}
 .footer .container .content .right .two p:nth-child(3) {
   text-transform: uppercase;
 }
@@ -1111,7 +1132,7 @@ nav i:hover {
   .footer .container .input {
     flex-direction: column;
   }
-  .footer .container .input i {
+  .footer .container .input a {
     left: 400px;
     top: 169px;
     right: auto;
@@ -1124,13 +1145,16 @@ nav i:hover {
   .footer .container .input input {
     width: 300px;
     padding-left: 15px;
+    font-size: 13px;
   }
   .footer .container .input input::placeholder {
     font-size: 13px;
   }
-  .footer .container .input i {
+  .footer .container .input a {
     left: 250px;
     top: 144px;
+  }
+  .footer .container .input a i {
     font-size: 25px;
   }
   .footer .container .input h1 {

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanks For Subscribtion</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1f373d;
+      font-family: Arial, Helvetica, sans-serif;
+      display: grid;
+      place-content: center;
+      min-height: 100vh;
+    }
+    p:not(:nth-child(2)) {
+      color: transparent;
+      font-size: 48px;
+      position: relative;
+      animation: subscribe-message 0.5s 1.4s linear forwards;
+    }
+    span {
+      height: 100%;
+      width: 0;
+      background-color: #ffcc01;
+      position: absolute;
+      left: 0;
+      top: 0;
+      animation: subscribe-message-span 1.5s 0.5s ease;
+    }
+    p:nth-child(2) {
+      text-align: center;
+      color: transparent;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 15px;
+      animation: subscribe-name 0.5s 1.4s linear forwards;
+      margin-top: 100px;
+    }
+    @keyframes subscribe-message-span {
+      50% {
+        width: 100%;
+        left: 0;
+      }
+      100% {
+        width: 0;
+        left: 100%;
+      }
+    }
+    @keyframes subscribe-message {
+      100% {
+        color: white;
+      }
+    }
+    @keyframes subscribe-name {
+      100% {
+        color: #ffcc01;
+      }
+    }
+    @media (max-width: 992px) {
+      p:first-child {
+        font-size: 37px;
+      }
+      p:nth-child(2) {
+        font-size: 19px;
+        letter-spacing: 12px;
+        margin-top: 50px;
+      }
+    }
+    @media (max-width: 768px) {
+      p:first-child {
+        font-size: 16px;
+      }
+      p:nth-child(2) {
+        font-size: 13px;
+        letter-spacing: 10px;
+        margin-top: 40px;
+      }
+    }
+  </style>
+  <body>
+    <p>
+      Thanks For Subscribing In Newsletter &#x1F496;&#x1F525;
+      <span> </span>
+    </p>
+    <p>KAREEM HESHAM&#x1F496;</p>
+  </body>
+</html>
