@@ -30,6 +30,13 @@ a {
   padding: 0 15px;
   margin: 0 auto;
 }
+/* Small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
 /* Medium */
 @media (min-width: 992px) {
   .container {
@@ -807,7 +814,6 @@ nav i:hover {
   width: fit-content;
   cursor: pointer;
   height: fit-content;
-  padding: 0 0 20px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 20px 0px #bdbdbd;
