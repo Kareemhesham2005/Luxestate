@@ -86,6 +86,23 @@ a {
   margin-bottom: 50px;
 }
 /* End Components */
+/* Start Loader */
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader img {
+  width: 200px;
+}
+/* End Loader */
 /* Start Header */
 nav {
   width: 100%;
@@ -96,7 +113,8 @@ nav {
 }
 nav .logo {
   color: var(--text-color);
-  font-size: 25px;
+  font-size: 22px;
+  text-transform: uppercase;
   height: 35.5px;
   letter-spacing: -1px;
   font-weight: 700;
@@ -217,9 +235,6 @@ nav .icon i {
 nav i:hover {
   color: var(--main-color);
 }
-#check {
-  display: none;
-}
 @media (max-width: 880px) {
   nav {
     position: fixed;
@@ -243,6 +258,9 @@ nav i:hover {
     -moz-transition: 0.5s all;
     -ms-transition: 0.5s all;
     -o-transition: 0.5s all;
+  }
+  nav ul.show {
+    left: 0;
   }
   nav ul li {
     display: block;
@@ -576,7 +594,6 @@ nav i:hover {
 .appartments .container .apps .app {
   width: fit-content;
   height: fit-content;
-  cursor: pointer;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 20px 0px #bdbdbd;
@@ -590,42 +607,7 @@ nav i:hover {
   width: 350px;
   height: 430px;
 }
-.appartments .container .apps .app:hover > label {
-  opacity: 1;
-}
-.appartments .container .apps .app > label {
-  opacity: 0;
-  cursor: pointer;
-  background-color: rgb(0, 0, 0, 0.5);
-  width: 100%;
-  height: 430px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 200;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-}
-.appartments .container .apps .app > label a {
-  text-decoration: none;
-}
-.appartments .container .apps .app > label i {
-  position: absolute;
-  font-size: 35px;
-  padding: 5px 10px;
-  top: 50%;
-  left: 50%;
-  background-color: var(--main-color);
-  color: white;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
+
 .appartments .container .apps .app .content {
   background-color: white;
   padding: 20px 20px 30px;
@@ -824,13 +806,12 @@ nav i:hover {
 }
 .agent .agents {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
   place-items: center;
 }
 .agent .agents .ag {
-  width: fit-content;
-  cursor: pointer;
+  width: 320px;
   height: fit-content;
   overflow: hidden;
   position: relative;
@@ -903,6 +884,32 @@ nav i:hover {
 .agent .container .agents .ag .content .info .icons i:hover {
   color: var(--main-color);
 }
+
+.agent .container .agents .ag .image {
+  text-align: center;
+  width: 100%;
+}
+
+.agent .container .agents .ag .image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.agent .container .agents .ag:first-child .image img {
+  object-position: center;
+}
+
+@media (max-width: 750px) {
+  .agent .container .agents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 500px) {
   .agent .main-heading {
     font-size: 30px;
@@ -915,9 +922,6 @@ nav i:hover {
   }
   .agent .container .agents .ag .content {
     padding: 20px 10px;
-  }
-  .agent .container .agents .ag .image img {
-    width: 300px;
   }
 }
 /* End Agents */
